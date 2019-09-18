@@ -16,15 +16,15 @@
 
 ## 파일
 
-![1568204705088](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568204705088.png)
+![1568204705088](https://user-images.githubusercontent.com/52530785/65146131-13752e00-da56-11e9-8ac3-ea407da14a11.png)
 
 ## IDA
 
-![1568203999365](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568203999365.png)
+![1568203999365](https://user-images.githubusercontent.com/52530785/65146130-13752e00-da56-11e9-9711-22e311412d6b.png)
 
 ## main 함수
 
-![1568203857602](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568203857602.png)
+![1568203857602](https://user-images.githubusercontent.com/52530785/65146129-13752e00-da56-11e9-9cb5-b109390414bc.png)
 
 - write(1, "WIN\n", 4u);	--> 첫번째 인자 1은 stdout
 
@@ -32,7 +32,7 @@
 
 ### sub_80483F4
 
-![1568203825294](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568203825294.png)
+![1568203825294](https://user-images.githubusercontent.com/52530785/65146128-13752e00-da56-11e9-8013-2bcda3125e10.png)
 
 - read(0, &buf, 0x100u);	--> 첫번째 인자 0은 stdin
 
@@ -44,19 +44,19 @@
 
 - b *main 	해서 메인함수가 안걸리면
 
-![1568205127402](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568205127402.png)
+![1568205127402](https://user-images.githubusercontent.com/52530785/65146132-140dc480-da56-11e9-8933-d43b957032db.png)
 
 - info fun 	으로 확인 후
 
-![1568205139170](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568205139170.png)
+![1568205139170](https://user-images.githubusercontent.com/52530785/65146133-140dc480-da56-11e9-912f-69f6b9271e03.png)
 
 - __libc_start_main 에 breakpoint 걸고 
 
-  ![1568205379582](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568205379582.png)
+![1568205379582](https://user-images.githubusercontent.com/52530785/65146134-140dc480-da56-11e9-9617-bd6334da4866.png)
 
 - run 시킨 후 ni로 넘기다 보면 main으로 넘어갈 수 있음.
 
-  ![1568205658258](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568205658258.png)
+![1568205658258](https://user-images.githubusercontent.com/52530785/65146135-140dc480-da56-11e9-9b67-fa13497b660a.png)
 
 - call 하는 부분이 있는데 거기에 함수 이름이 안나오면 si로 들어가서 보기
 
@@ -64,7 +64,7 @@
 
 - main문
 
-![1568205859950](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568205859950.png)
+![1568205859950](https://user-images.githubusercontent.com/52530785/65146136-14a65b00-da56-11e9-848e-6665e154d63d.png)
 
 
 
@@ -77,7 +77,7 @@
 - write@plt	--> 0x0804830c
 - read@plt	--> 0x0804832c
 
-![1568206111056](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568206111056.png)
+![1568206111056](https://user-images.githubusercontent.com/52530785/65146137-14a65b00-da56-11e9-82c6-8aa16dc472cb.png)
 
 
 
@@ -87,7 +87,7 @@
 
 ### ldd
 
-![1568212461874](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568212461874.png)
+![1568212461874](https://user-images.githubusercontent.com/52530785/65146138-14a65b00-da56-11e9-9f4b-5ad7d241703d.png)
 
 - ldd 
   - 현재 쓰이고 있는 libc의 주소를 구할 수 있지만, ASLR 떄문에 주소가 매번 바껴서 의미는 없음
@@ -97,13 +97,13 @@
 
 ### Pwntools
 
-![1568443741069](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568443741069.png)
+![1568443741069](https://user-images.githubusercontent.com/52530785/65146125-12dc9780-da56-11e9-9a11-05db4dd01dde.png)
 
 
 
 결과
 
-![1568219359196](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568219359196.png)
+![1568219359196](https://user-images.githubusercontent.com/52530785/65146140-153ef180-da56-11e9-98ae-9656edccd38b.png)
 
 
 
@@ -115,7 +115,7 @@
 
 ### 시나리오
 
-![1568443842960](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568443842960.png)
+![1568443842960](https://user-images.githubusercontent.com/52530785/65146126-12dc9780-da56-11e9-854c-a997f5c7ddce.png)
 
 
 
@@ -135,7 +135,7 @@
 
 - 여기서는 gdb ropasourusrex 를 통해 알아냄
 
-![1568276602528](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568276602528.png)
+![1568276602528](https://user-images.githubusercontent.com/52530785/65146141-153ef180-da56-11e9-860b-2c15adcbcc9b.png)
 
 
 
@@ -143,7 +143,7 @@
 
 ## exploit
 
-![1568286960497](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568286960497.png)
+![1568286960497](https://user-images.githubusercontent.com/52530785/65146124-12dc9780-da56-11e9-8d22-dcb79beb6ca7.png)
 
 ```python
 #!/usr/bin/python
@@ -194,7 +194,7 @@ p.interactive()
 
 
 
-![1568279348241](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568279348241.png)
+![1568279348241](https://user-images.githubusercontent.com/52530785/65146142-153ef180-da56-11e9-8ec5-69dce500dd6e.png)
 
 
 
@@ -210,21 +210,20 @@ p.interactive()
 
 - 일단 기본적인 ex를 써놓았다.
 
-  ![1568280029979](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280029979.png)
+![1568280029979](https://user-images.githubusercontent.com/52530785/65146108-107a3d80-da56-11e9-98c9-ae8efa565185.png)
 
 - process
 
 - ropasaurusrex의 바이너리 
 
   - -> 바이너리 내부에 뭐가 있는지 출력해준다.
-  - ![1568280481352](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280481352.png)
+  - ![1568280481352](https://user-images.githubusercontent.com/52530785/65146112-1112d400-da56-11e9-82f6-0668d5079d9b.png)
 
 - ldd ./ropasaurusrex  명령어를 통해 알아낸 libc 
 
-  ![1568280329983](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280329983.png)
-
+![1568280329983](https://user-images.githubusercontent.com/52530785/65146109-107a3d80-da56-11e9-8dd1-ecb98c4e225f.png)
   - -> libc 내부에 뭐가 있는지 출력해준다.
-  - ![1568280459289](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280459289.png)
+  - ![1568280459289](https://user-images.githubusercontent.com/52530785/65146111-1112d400-da56-11e9-98db-5fa23536d08f.png)
 
 - libc 내에 있는 write 주소
 
@@ -238,7 +237,7 @@ p.interactive()
 
 - log.info를 통해 위에서 정의해둔 주소값들 출력
 
-![1568280379504](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280379504.png)
+![1568280379504](https://user-images.githubusercontent.com/52530785/65146110-107a3d80-da56-11e9-8bc2-31215f400ed2.png)
 
 - write와 read의 인자는 3개가 들어가기 때문에 pop, pop, pop, ret이 필요하므로
 
@@ -246,19 +245,16 @@ p.interactive()
   gdb ropasaurusrex 를 통해 pop, pop, pop, ret 인 Gadget 찾아냄
   ```
 
-  ![1568280628757](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280628757.png)
+![1568280628757](https://user-images.githubusercontent.com/52530785/65146115-1112d400-da56-11e9-9497-63a570b44672.png)
 
-  ![1568280673637](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280673637.png)
+![1568280673637](https://user-images.githubusercontent.com/52530785/65146116-1112d400-da56-11e9-8a58-a20764ed08f4.png)
 
-  ![1568280693831](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280693831.png)
+![1568280693831](https://user-images.githubusercontent.com/52530785/65146117-11ab6a80-da56-11e9-81a0-d9761e8aac22.png)
 
   
 
-  - breakpoint를 걸고 쭉 넘기다 보면
-
-![1568280710236](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280710236.png)
-
-![1568280756821](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280756821.png)
+  - breakpoint를 걸고 ni로 쭉 넘기다 보면
+![1568280756821](https://user-images.githubusercontent.com/52530785/65146118-11ab6a80-da56-11e9-9133-2c8a6dfc058e.png)
 
 위와 같이 pop, pop, pop, ret 인 Gadget이 보인다.
 
@@ -270,13 +266,13 @@ POC에 주소 추가 하기
 
 위와 같이 pppr을 추가해주고
 
-![1568282277699](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568282277699.png)
+![1568282277699](https://user-images.githubusercontent.com/52530785/65146121-12440100-da56-11e9-937d-bd072261c972.png)
 
 pppr 은 문자가 아니기 때문에 작은따옴표로 싸지 않는다.
 
 
 
-![1568280881943](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568280881943.png)
+![1568280881943](https://user-images.githubusercontent.com/52530785/65146119-11ab6a80-da56-11e9-9684-ff329299a30e.png)
 
 미리 알아낸 write_got 주소값 안에 있는 값을 알아오고, 
 
@@ -290,7 +286,7 @@ pppr 은 문자가 아니기 때문에 작은따옴표로 싸지 않는다.
 
 이거는
 
-![1568283925710](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568283925710.png)
+![1568283925710](https://user-images.githubusercontent.com/52530785/65146123-12440100-da56-11e9-9940-41bb1cab07fd.png)
 
 write로 write@got leak하고 writable영역에 /bin/sh 적고 바로 read를 호출했는데
 
@@ -300,7 +296,7 @@ read@got 는 read_libc를 가리키고있으니까 그전에 read@got에 system_
 
 ----
 
-![1568282304749](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568282304749.png)
+![1568282304749](https://user-images.githubusercontent.com/52530785/65146122-12440100-da56-11e9-9e70-b53d43717210.png)
 
 write로 write_got 주소값 안에 있는 값을 알아내서 가져오고, 이를 통해 libc 함수 주소를 계산한다.
 
@@ -312,7 +308,7 @@ write로 write_got 주소값 안에 있는 값을 알아내서 가져오고, 이
 
 
 
-![1568282240895](C:\Users\Jaewan.DESKTOP-TRD27GL\AppData\Roaming\Typora\typora-user-images\1568282240895.png)
+![1568282240895](https://user-images.githubusercontent.com/52530785/65146120-11ab6a80-da56-11e9-996f-812c580d4f2a.png)
 
 쉘이 따졌다.
 
@@ -328,5 +324,5 @@ recvuntil 을 안쓰는 이유,
 
 
 
-![1568797476667](C:%5CUsers%5CJaewan.DESKTOP-TRD27GL%5CDesktop%5C%ED%8F%AC%EB%84%88%EB%B8%94%20%EA%B3%B5%EB%B6%80%5CROP%5Crop%2032%EB%B9%84%ED%8A%B8%5Cropasaurusrex%5CROP%20-%20ropasaurusrex.assets%5C1568797476667.png)
+![1568797476667](https://user-images.githubusercontent.com/52530785/65146127-12dc9780-da56-11e9-8dbb-0a1d1016ed24.png)
 
